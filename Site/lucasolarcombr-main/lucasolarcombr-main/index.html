@@ -16,24 +16,455 @@
       property="og:description"
       content="Projeto, instalacao e acompanhamento de energia solar fotovoltaica para residencias, comercios e propriedades rurais no Espirito Santo."
     />
-    <meta property="og:image" content="./src/assets/hero-solar.jpg" />
+    <meta property="og:image" content="images/hero-solar.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="LUCA SOLAR | Energia Solar no Espirito Santo" />
     <meta
       name="twitter:description"
       content="Projeto, instalacao e acompanhamento de energia solar fotovoltaica para residencias, comercios e propriedades rurais no Espirito Santo."
     />
-    <meta name="twitter:image" content="./src/assets/hero-solar.jpg" />
-    <link rel="icon" type="image/png" href="./src/assets/logo.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
-    />
+    <meta name="twitter:image" content="images/hero-solar.jpg" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/main.js"></script>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div class="min-h-screen bg-background text-foreground">
+      <a
+        href="#conteudo"
+        class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-accent focus:px-4 focus:py-2 focus:font-medium focus:text-navy-deep"
+      >
+        Pular para o conteudo
+      </a>
+
+      <header class="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/70 backdrop-blur-md">
+        <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
+          <a
+            href="#top"
+            class="flex items-center gap-2 font-display font-bold text-navy-deep"
+            aria-label="Ir para o topo da pagina"
+          >
+            <svg class="size-6 text-accent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+            <span class="tracking-tight">LUCA<span class="text-accent">.</span>SOLAR</span>
+          </a>
+
+          <nav class="hidden items-center gap-8 text-sm font-medium md:flex" aria-label="Navegacao principal">
+            <a href="#sobre" class="transition hover:text-accent">Sobre</a>
+            <a href="#servicos" class="transition hover:text-accent">Servicos</a>
+            <a href="#depoimentos" class="transition hover:text-accent">Avaliacoes</a>
+            <a href="#faq" class="transition hover:text-accent">FAQ</a>
+          </nav>
+
+          <a
+            href="#contato"
+            class="hidden rounded-full bg-navy-deep px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:bg-navy md:inline-flex md:items-center md:gap-2"
+          >
+            Contato
+            <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M7 7h10v10"></path>
+              <path d="M7 17 17 7"></path>
+            </svg>
+          </a>
+
+          <button
+            type="button"
+            class="md:hidden"
+            data-menu-toggle
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+          >
+            <svg data-menu-icon="open" class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 12h16"></path>
+              <path d="M4 6h16"></path>
+              <path d="M4 18h16"></path>
+            </svg>
+            <svg data-menu-icon="close" class="size-6 hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div id="mobile-menu" data-mobile-menu class="hidden flex-col gap-3 border-t border-border bg-background px-6 py-4 text-sm md:hidden">
+          <a href="#sobre">Sobre</a>
+          <a href="#servicos">Servicos</a>
+          <a href="#depoimentos">Avaliacoes</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contato" class="mt-2 rounded-full bg-navy-deep px-4 py-2 text-center text-primary-foreground">Contato</a>
+        </div>
+      </header>
+
+      <main id="conteudo">
+        <section id="top" class="relative overflow-hidden pb-16 pt-24 md:pb-24 md:pt-32" style="background: var(--gradient-navy-radial)">
+          <div class="absolute inset-0 opacity-20 mix-blend-overlay" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 32px 32px"></div>
+          <div class="relative mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-12 lg:items-center">
+            <div class="text-primary-foreground lg:col-span-7">
+              <span class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs uppercase tracking-widest">
+                <span class="size-1.5 rounded-full bg-accent animate-pulse"></span> Espirito Santo - Brasil
+              </span>
+              <h1 class="font-display text-5xl font-bold leading-[0.95] md:text-7xl lg:text-8xl">
+                Solucoes em
+                <br />
+                <span class="text-accent">Energia Solar</span>
+              </h1>
+              <p class="mt-8 max-w-xl text-lg text-white/70 md:text-xl">
+                Projeto, instalacao e acompanhamento pos-venda em energia solar fotovoltaica para residencias, comercios e propriedades rurais.
+              </p>
+              <div class="mt-10 flex flex-wrap gap-4">
+                <a href="#contato" class="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-4 font-semibold text-navy-deep transition hover:scale-[1.02]">
+                  Solicitar orcamento
+                  <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M7 7h10v10"></path>
+                    <path d="M7 17 17 7"></path>
+                  </svg>
+                </a>
+                <a href="#servicos" class="inline-flex items-center gap-2 rounded-full border border-white/25 px-7 py-4 font-medium text-primary-foreground transition hover:bg-white/10">
+                  Nossos servicos
+                </a>
+              </div>
+              <div class="mt-14 grid max-w-lg grid-cols-3 gap-6">
+                <div>
+                  <div class="font-display text-3xl text-accent md:text-4xl">+500</div>
+                  <div class="mt-1 text-xs uppercase tracking-wider text-white/60">Instalacoes</div>
+                </div>
+                <div>
+                  <div class="font-display text-3xl text-accent md:text-4xl">90%</div>
+                  <div class="mt-1 text-xs uppercase tracking-wider text-white/60">Economia</div>
+                </div>
+                <div>
+                  <div class="font-display text-3xl text-accent md:text-4xl">10+</div>
+                  <div class="mt-1 text-xs uppercase tracking-wider text-white/60">Anos no ES</div>
+                </div>
+              </div>
+            </div>
+            <div class="relative lg:col-span-5">
+              <div class="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-2xl">
+                <img src="images/hero-solar.jpg" alt="Instalacao de paineis solares ao por do sol" class="h-full w-full object-cover" width="1536" height="1024" fetchpriority="high" />
+              </div>
+              <div class="absolute -bottom-8 -left-8 hidden aspect-square w-48 overflow-hidden rounded-2xl border-4 border-background shadow-elegant md:block">
+                <img src="images/install-hands.jpg" alt="Instalacao tecnica" loading="lazy" class="h-full w-full object-cover" width="400" height="400" />
+              </div>
+              <div class="absolute -right-4 -top-4 hidden size-28 rotate-12 items-center justify-center rounded-full bg-accent text-center font-display text-sm font-bold leading-tight text-navy-deep md:flex">
+                SAIBA<br />MAIS
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="sobre" class="py-24 md:py-32">
+          <div class="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-12 lg:items-center">
+            <div class="grid grid-cols-2 gap-4 lg:col-span-6">
+              <img src="images/panels-closeup.jpg" alt="Paineis solares" loading="lazy" class="aspect-[3/4] w-full translate-y-8 rounded-2xl object-cover" width="600" height="800" />
+              <img src="images/house-solar.jpg" alt="Casa com paineis solares" loading="lazy" class="aspect-[3/4] w-full rounded-2xl object-cover" width="600" height="800" />
+            </div>
+            <div class="lg:col-span-6">
+              <span class="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Sobre nos</span>
+              <h2 class="mt-4 font-display text-4xl font-bold text-navy-deep md:text-5xl lg:text-6xl">
+                Solucoes personalizadas para residencias, comercio e industrias.
+              </h2>
+              <p class="mt-6 text-lg text-muted-foreground">
+                A LUCA SOLAR e referencia em energia solar no Espirito Santo. Trabalhamos com equipamentos de alta performance e uma equipe tecnica certificada para entregar projetos sob medida, do dimensionamento a operacao.
+              </p>
+              <ul class="mt-8 space-y-3">
+                <li class="flex items-center gap-3 text-foreground">
+                  <span class="grid size-6 place-items-center rounded-full bg-navy-deep text-primary-foreground">
+                    <svg class="size-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M20 6 9 17l-5-5"></path>
+                    </svg>
+                  </span>
+                  Equipamentos com garantia de fabrica
+                </li>
+                <li class="flex items-center gap-3 text-foreground">
+                  <span class="grid size-6 place-items-center rounded-full bg-navy-deep text-primary-foreground">
+                    <svg class="size-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M20 6 9 17l-5-5"></path>
+                    </svg>
+                  </span>
+                  Equipe tecnica certificada
+                </li>
+                <li class="flex items-center gap-3 text-foreground">
+                  <span class="grid size-6 place-items-center rounded-full bg-navy-deep text-primary-foreground">
+                    <svg class="size-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M20 6 9 17l-5-5"></path>
+                    </svg>
+                  </span>
+                  Atendimento em todo o Espirito Santo
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="servicos" class="relative overflow-hidden bg-navy-deep py-24 text-primary-foreground md:py-32">
+          <div class="absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 24px 24px"></div>
+          <div class="relative mx-auto max-w-7xl px-6">
+            <div class="mb-16 flex flex-wrap items-end justify-between gap-6">
+              <div>
+                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-accent">O que fazemos</span>
+                <h2 class="mt-4 max-w-2xl font-display text-4xl font-bold md:text-6xl">Tudo que voce precisa para gerar a propria energia.</h2>
+              </div>
+              <a href="#contato" class="hidden items-center gap-2 text-accent transition-all hover:gap-3 md:inline-flex">
+                Fale conosco
+                <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 7h10v10"></path>
+                  <path d="M7 17 17 7"></path>
+                </svg>
+              </a>
+            </div>
+            <div class="grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 md:grid-cols-3">
+              <article class="group bg-navy-deep p-8 transition hover:bg-navy md:p-10">
+                <div class="flex items-start justify-between">
+                  <span class="font-display text-5xl text-accent">01</span>
+                  <svg class="size-6 opacity-40 transition-all group-hover:rotate-45 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M7 7h10v10"></path>
+                    <path d="M7 17 17 7"></path>
+                  </svg>
+                </div>
+                <h3 class="mt-12 font-display text-2xl font-semibold">Projeto Fotovoltaico</h3>
+                <p class="mt-4 text-white/65">Desenvolvemos projetos personalizados, dimensionados para o seu consumo e perfil de telhado.</p>
+              </article>
+              <article class="group bg-navy-deep p-8 transition hover:bg-navy md:p-10">
+                <div class="flex items-start justify-between">
+                  <span class="font-display text-5xl text-accent">02</span>
+                  <svg class="size-6 opacity-40 transition-all group-hover:rotate-45 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M7 7h10v10"></path>
+                    <path d="M7 17 17 7"></path>
+                  </svg>
+                </div>
+                <h3 class="mt-12 font-display text-2xl font-semibold">Instalacao de Paineis</h3>
+                <p class="mt-4 text-white/65">Equipe certificada para instalacoes seguras, com equipamentos de alta performance e garantia.</p>
+              </article>
+              <article class="group bg-navy-deep p-8 transition hover:bg-navy md:p-10">
+                <div class="flex items-start justify-between">
+                  <span class="font-display text-5xl text-accent">03</span>
+                  <svg class="size-6 opacity-40 transition-all group-hover:rotate-45 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M7 7h10v10"></path>
+                    <path d="M7 17 17 7"></path>
+                  </svg>
+                </div>
+                <h3 class="mt-12 font-display text-2xl font-semibold">Acompanhamento Pos-Venda</h3>
+                <p class="mt-4 text-white/65">Monitoramento, manutencao e suporte continuo para o melhor rendimento do seu sistema.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="py-24 md:py-32">
+          <div class="mx-auto max-w-7xl px-6">
+            <div class="grid gap-12 lg:grid-cols-12 lg:items-center">
+              <div class="lg:col-span-5">
+                <span class="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Vamos trabalhar juntos</span>
+                <h2 class="mt-4 font-display text-4xl font-bold text-navy-deep md:text-5xl">Instalacao profissional, resultados duradouros.</h2>
+                <p class="mt-6 text-muted-foreground">Cada projeto e unico. Conheca os principais beneficios de adotar energia solar com a LUCA SOLAR.</p>
+              </div>
+              <div class="lg:col-span-7">
+                <img src="images/aerial-array.jpg" alt="Vista aerea de instalacao solar" loading="lazy" class="aspect-[16/10] w-full rounded-3xl object-cover shadow-elegant" width="1280" height="896" />
+              </div>
+            </div>
+            <div class="mt-16 grid gap-6 md:grid-cols-3">
+              <article class="rounded-2xl border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:shadow-elegant">
+                <span class="font-display text-sm font-bold text-accent">01</span>
+                <h3 class="mt-3 font-display text-2xl font-semibold text-navy-deep">Solucoes Sustentaveis</h3>
+                <p class="mt-3 text-muted-foreground">Economia e responsabilidade ambiental para o seu negocio ou propriedade rural.</p>
+              </article>
+              <article class="rounded-2xl border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:shadow-elegant">
+                <span class="font-display text-sm font-bold text-accent">02</span>
+                <h3 class="mt-3 font-display text-2xl font-semibold text-navy-deep">Energia Limpa</h3>
+                <p class="mt-3 text-muted-foreground">Geracao propria de energia limpa, renovavel e silenciosa para a sua rotina.</p>
+              </article>
+              <article class="rounded-2xl border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:shadow-elegant">
+                <span class="font-display text-sm font-bold text-accent">03</span>
+                <h3 class="mt-3 font-display text-2xl font-semibold text-navy-deep">Ate 90% de Economia</h3>
+                <p class="mt-3 text-muted-foreground">Reduza drasticamente a conta de luz gerando a propria energia todos os meses.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="depoimentos" class="bg-secondary py-24 md:py-32">
+          <div class="mx-auto max-w-7xl px-6">
+            <div class="mx-auto mb-16 max-w-2xl text-center">
+              <span class="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Avaliacoes</span>
+              <h2 class="mt-4 font-display text-4xl font-bold text-navy-deep md:text-5xl">Historias reais de quem ja trocou pela LUCA SOLAR.</h2>
+            </div>
+            <div class="grid gap-6 md:grid-cols-3">
+              <figure class="rounded-2xl border border-border bg-background p-8">
+                <div class="text-lg text-accent">★★★★★</div>
+                <blockquote class="mt-4 leading-relaxed text-foreground">&quot;Nao poderia estar mais feliz com o servico da LUCA SOLAR. Equipe profissional do inicio ao fim e qualidade impecavel dos paineis.&quot;</blockquote>
+                <figcaption class="mt-6 border-t border-border pt-6">
+                  <div class="font-display font-semibold text-navy-deep">Michael Lorris</div>
+                  <div class="text-sm text-muted-foreground">Cliente - Vitoria</div>
+                </figcaption>
+              </figure>
+              <figure class="rounded-2xl border border-border bg-background p-8">
+                <div class="text-lg text-accent">★★★★★</div>
+                <blockquote class="mt-4 leading-relaxed text-foreground">&quot;Atencao meticulosa aos detalhes. A instalacao foi tranquila e os resultados superaram minhas expectativas.&quot;</blockquote>
+                <figcaption class="mt-6 border-t border-border pt-6">
+                  <div class="font-display font-semibold text-navy-deep">Tabitha Stevens</div>
+                  <div class="text-sm text-muted-foreground">Cliente - Vila Velha</div>
+                </figcaption>
+              </figure>
+              <figure class="rounded-2xl border border-border bg-background p-8">
+                <div class="text-lg text-accent">★★★★★</div>
+                <blockquote class="mt-4 leading-relaxed text-foreground">&quot;Em poucos meses a economia na conta de luz ja era visivel. Recomendo de olhos fechados.&quot;</blockquote>
+                <figcaption class="mt-6 border-t border-border pt-6">
+                  <div class="font-display font-semibold text-navy-deep">Rafael Costa</div>
+                  <div class="text-sm text-muted-foreground">Cliente - Serra</div>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section id="faq" class="bg-secondary py-24 md:py-32">
+          <div class="mx-auto max-w-4xl px-6">
+            <div class="mb-16 text-center">
+              <span class="text-xs font-semibold uppercase tracking-[0.2em] text-accent">FAQ</span>
+              <h2 class="mt-4 font-display text-4xl font-bold text-navy-deep md:text-5xl">Perguntas frequentes</h2>
+            </div>
+            <div class="space-y-3">
+              <div class="overflow-hidden rounded-2xl border border-border bg-background">
+                <button id="faq-button-0" type="button" class="flex w-full items-center justify-between p-6 text-left" data-faq-button aria-expanded="true" aria-controls="faq-panel-0">
+                  <span class="font-display text-lg font-semibold text-navy-deep">Como comecamos?</span>
+                  <svg data-faq-icon class="size-5 rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6"></path>
+                  </svg>
+                </button>
+                <div id="faq-panel-0" data-faq-panel="0" role="region" aria-labelledby="faq-button-0" class="px-6 pb-6 text-muted-foreground">
+                  Vamos dar o primeiro passo juntos em direcao a uma energia mais limpa e economica, comecando com um projeto sob medida para voce.
+                </div>
+              </div>
+              <div class="overflow-hidden rounded-2xl border border-border bg-background">
+                <button id="faq-button-1" type="button" class="flex w-full items-center justify-between p-6 text-left" data-faq-button aria-expanded="false" aria-controls="faq-panel-1">
+                  <span class="font-display text-lg font-semibold text-navy-deep">Voces atendem todo o estado?</span>
+                  <svg data-faq-icon class="size-5 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6"></path>
+                  </svg>
+                </button>
+                <div id="faq-panel-1" data-faq-panel="1" role="region" aria-labelledby="faq-button-1" class="px-6 pb-6 text-muted-foreground" hidden>
+                  Sim, atualmente a LUCA SOLAR atende todo o estado do Espirito Santo.
+                </div>
+              </div>
+              <div class="overflow-hidden rounded-2xl border border-border bg-background">
+                <button id="faq-button-2" type="button" class="flex w-full items-center justify-between p-6 text-left" data-faq-button aria-expanded="false" aria-controls="faq-panel-2">
+                  <span class="font-display text-lg font-semibold text-navy-deep">Exigem pagamento antecipado?</span>
+                  <svg data-faq-icon class="size-5 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6"></path>
+                  </svg>
+                </button>
+                <div id="faq-panel-2" data-faq-panel="2" role="region" aria-labelledby="faq-button-2" class="px-6 pb-6 text-muted-foreground" hidden>
+                  Oferecemos condicoes flexiveis e transparencia total, adaptando-nos as suas necessidades.
+                </div>
+              </div>
+              <div class="overflow-hidden rounded-2xl border border-border bg-background">
+                <button id="faq-button-3" type="button" class="flex w-full items-center justify-between p-6 text-left" data-faq-button aria-expanded="false" aria-controls="faq-panel-3">
+                  <span class="font-display text-lg font-semibold text-navy-deep">Quais sao os termos de pagamento?</span>
+                  <svg data-faq-icon class="size-5 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m6 9 6 6 6-6"></path>
+                  </svg>
+                </button>
+                <div id="faq-panel-3" data-faq-panel="3" role="region" aria-labelledby="faq-button-3" class="px-6 pb-6 text-muted-foreground" hidden>
+                  Termos justos e claros, com tranquilidade para investir em energia solar.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contato" class="relative overflow-hidden py-24 md:py-32" style="background: var(--gradient-navy)">
+          <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 32px 32px"></div>
+          <div class="relative mx-auto max-w-5xl px-6 text-center text-primary-foreground">
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Vamos trabalhar juntos</span>
+            <h2 class="mt-4 font-display text-5xl font-bold md:text-7xl">
+              Pronto para gerar
+              <br />
+              sua <span class="text-accent">propria energia?</span>
+            </h2>
+            <p class="mx-auto mt-6 max-w-2xl text-lg text-white/70">
+              Fale com a nossa equipe e receba um orcamento personalizado para a sua casa ou empresa.
+            </p>
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+              <a href="https://wa.me/5527992253328" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 rounded-full bg-accent px-8 py-5 text-lg font-semibold text-navy-deep transition hover:scale-[1.02]" aria-label="Conversar pelo WhatsApp no numero 27 99225 3328">
+                <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.11 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.89.33 1.76.61 2.59a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.49-1.18a2 2 0 0 1 2.11-.45c.83.28 1.7.49 2.59.61A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                (27) 99225-3328
+              </a>
+              <button type="button" data-copy-email data-email="contato.lucasolar@gmail.com" class="cursor-pointer rounded-full border border-white/25 px-8 py-5 text-left text-lg font-medium transition hover:bg-white/10" aria-label="Copiar email de contato">
+                <span class="inline-flex items-center gap-3">
+                  <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a2 2 0 0 1-2.06 0L2 7"></path>
+                  </svg>
+                  <span>
+                    <span class="block">contato.lucasolar@gmail.com</span>
+                    <span class="text-xs text-white/70" data-copy-email-label>Clique para copiar</span>
+                  </span>
+                </span>
+              </button>
+              <a href="https://instagram.com/lucasolar.es" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 rounded-full border border-white/25 px-8 py-5 text-lg font-medium transition hover:bg-white/10" aria-label="Abrir perfil do Instagram da Luca Solar">
+                <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                </svg>
+                @lucasolar.es
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="border-t border-white/10 bg-navy-deep text-primary-foreground">
+        <div class="mx-auto grid max-w-7xl gap-8 px-6 py-12 md:grid-cols-3 md:items-center">
+          <div class="flex items-center gap-2 font-display text-xl font-bold">
+            <svg class="size-6 text-accent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+            LUCA<span class="text-accent">.</span>SOLAR
+          </div>
+          <div class="text-sm text-white/60 md:text-center">© <span data-current-year>2026</span> LUCA SOLAR. Energia limpa no Espirito Santo.</div>
+          <div class="flex flex-wrap gap-4 md:justify-end">
+            <a href="https://instagram.com/lucasolar.es" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="grid size-10 place-items-center rounded-full border border-white/15 transition hover:border-accent hover:bg-accent hover:text-navy-deep">
+              <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://maps.google.com/?q=Espirito+Santo+Brasil" target="_blank" rel="noopener noreferrer" aria-label="Abrir localizacao no mapa" class="grid size-10 place-items-center rounded-full border border-white/15 transition hover:border-accent hover:bg-accent hover:text-navy-deep">
+              <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </footer>
+
+      <div data-copy-toast class="fixed bottom-6 left-1/2 z-50 hidden -translate-x-1/2 rounded-full bg-accent px-5 py-3 text-sm font-semibold text-navy-deep shadow-xl">
+        Email copiado para a area de transferencia!
+      </div>
+    </div>
   </body>
 </html>
