@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
+    "build:pages": "vite build",
     "build:dev": "vite build --mode development",
+    "postbuild": "node scripts/postbuild-pages.mjs",
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write ."
